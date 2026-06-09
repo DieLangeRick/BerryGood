@@ -56,6 +56,6 @@ export default function Modal({ card, onClose }) {
 }
 
 function getYouTubeId(url) {
-  const match = url.match(/(?:v=|youtu\.be\/)([^&\n?#]+)/);
+  const match = url.match(/(?:v=|youtu\.be\/|\/shorts\/|\/embed\/)([^&\n?#]+)/);
   return match ? match[1] : "";
 }
