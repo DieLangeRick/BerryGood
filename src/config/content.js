@@ -1,6 +1,6 @@
 export const hero = {
-  type: "image", // "image" | "video" — swap to "video" when you have a short clip
-  src: "/hero.jpg",
+  type: "video",
+  src: "/timeline/1.mp4",
   title: "Aardbei",
   tagline: "An autonomous strawberry-picking robot",
 };
