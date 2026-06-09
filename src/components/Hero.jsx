@@ -25,7 +25,7 @@ export default function Hero() {
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-void/40 via-transparent to-void" />
+      <div className="absolute inset-0 bg-gradient-to-b from-void/20 via-transparent to-void" />
 
       <div className="relative z-10 text-center px-4">
         <h1 className="font-display text-6xl md:text-8xl font-black text-cream text-glow mb-4 uppercase tracking-tight">
@@ -34,7 +34,7 @@ export default function Hero() {
 
         <div className="text-4xl mb-5 select-none">🍓</div>
 
-        <p className="font-serif italic text-cream/60 text-xl md:text-2xl max-w-sm mx-auto leading-relaxed">
+        <p className="font-serif italic text-cream/60 text-base md:text-lg max-w-sm mx-auto leading-relaxed">
           {hero.tagline}
         </p>
       </div>
