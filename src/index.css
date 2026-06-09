@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0a0a0f;
+    color: #f0ece2;
+  }
+}
+
+@layer utilities {
+  .bg-circuit {
+    background-image:
+      linear-gradient(rgba(232, 41, 74, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 41, 74, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glow-berry {
+    box-shadow: 0 0 30px rgba(232, 41, 74, 0.15), 0 0 60px rgba(232, 41, 74, 0.05);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 30px rgba(232, 41, 74, 0.6), 0 0 60px rgba(232, 41, 74, 0.3);
+  }
+
+  .animate-scan {
+    animation: scan 10s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); opacity: 0; }
+  5% { opacity: 1; }
+  95% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}

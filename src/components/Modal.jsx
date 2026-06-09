@@ -10,19 +10,35 @@ export default function Modal({ card, onClose }) {
   return (
     <div
       data-testid="modal-backdrop"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-void/90 p-4 backdrop-blur-sm"
       onClick={onClose}
     >
       <div
         data-testid="modal-content"
-        className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        className="bg-surface border border-berry/30 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto glow-berry"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Terminal header bar */}
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-berry/20 bg-void">
+          <div className="flex items-center gap-2.5">
+            <div className="w-1.5 h-1.5 rounded-full bg-berry animate-pulse" />
+            <span className="font-mono text-berry text-xs tracking-[0.3em] uppercase">{card.phase}</span>
+          </div>
+          <button
+            onClick={onClose}
+            className="font-mono text-cream/30 hover:text-berry transition-colors text-xs tracking-widest"
+            aria-label="Close modal"
+          >
+            [ESC]
+          </button>
+        </div>
+
+        {/* Media */}
         <div className="relative">
           {card.videoUrl ? (
             <div className="aspect-video">
               <iframe
-                className="w-full h-full rounded-t-2xl"
+                className="w-full h-full"
                 src={`https://www.youtube.com/embed/${getYouTubeId(card.videoUrl)}`}
                 title={card.label}
                 allowFullScreen
@@ -32,23 +48,18 @@ export default function Modal({ card, onClose }) {
             <img
               src={card.image}
               alt={card.label}
-              className="w-full rounded-t-2xl object-cover max-h-72"
+              className="w-full object-cover max-h-64 opacity-75"
             />
           )}
-          <button
-            onClick={onClose}
-            className="absolute top-3 right-3 bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 text-xl leading-none"
-            aria-label="Close modal"
-          >
-            ×
-          </button>
+          <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent pointer-events-none" />
         </div>
+
+        {/* Content */}
         <div className="p-6">
-          <span className="text-xs text-red-500 font-semibold uppercase tracking-wide">
-            {card.phase}
-          </span>
-          <h2 className="text-2xl font-bold text-gray-900 mt-1 mb-3">{card.label}</h2>
-          <p className="text-gray-600 leading-relaxed">{card.modalDescription}</p>
+          <h2 className="font-display text-lg font-black text-cream uppercase tracking-wide mb-4">
+            {card.label}
+          </h2>
+          <p className="font-mono text-sm text-cream/55 leading-relaxed">{card.modalDescription}</p>
         </div>
       </div>
     </div>

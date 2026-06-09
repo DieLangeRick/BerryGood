@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Set-Location \"C:\\\\Users\\\\hjric\\\\Desktop\\\\aardbei\\\\website\"; $input = \"y`n\"; $proc = Start-Process -FilePath \"npm\" -ArgumentList \"create\", \"vite@latest\", \".\", \"--\", \"--template\", \"react\" -NoNewWindow -PassThru -RedirectStandardInput \"C:\\\\Users\\\\hjric\\\\Desktop\\\\aardbei\\\\website\\\\input.txt\" -RedirectStandardOutput \"C:\\\\Users\\\\hjric\\\\Desktop\\\\aardbei\\\\website\\\\output.txt\" -RedirectStandardError \"C:\\\\Users\\\\hjric\\\\Desktop\\\\aardbei\\\\website\\\\error.txt\"; Write-Host \"PID: $\\($proc.Id\\)\")",
+      "PowerShell(New-Item *)",
+      "Bash(npx vitest *)",
+      "Bash(node -e \"import\\('./tailwind.config.js'\\).then\\(m => console.log\\('tailwind config ok:', JSON.stringify\\(m.default, null, 2\\)\\)\\)\")",
+      "Bash(npx vite *)",
+      "Bash(npx eslint *)",
+      "Bash(node -e ' *)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\hjric\\\\Desktop\\\\aardbei\\\\website\\\\src\\\\assets\\\\hero.png\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\hjric\\\\Desktop\\\\aardbei\\\\website\\\\public\\\\icons.svg\" -Force)",
+      "Bash(npm test *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(dir *)",
+      "Bash(git commit *)",
+      "Skill(code-review)",
+      "Bash(git init *)",
+      "Skill(run)",
+      "Bash(npm run *)",
+      "Bash(Start-Sleep -Seconds 3)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:5173\" -UseBasicParsing -TimeoutSec 5)",
+      "Bash(Select-Object -First 5)",
+      "Bash(node *)",
+      "Bash(curl -s http://localhost:5173)"
+    ]
+  }
+}

@@ -49,7 +49,7 @@ export const timelineCards = [
 ];
 
 export const team = {
-  school: "Your School Name",
+  school: "NHL Stenden Hogeschool",
   year: "2025–2026",
-  members: ["Team Member 1", "Team Member 2", "Team Member 3"],
+  members: ["Rick Wassink", "Sander Broekhof", "Sven Terpstra", "Bouwe Westert", "Tim Groen", "Tieme van Reenen", "Jelle Douma", "Hessel Zijlstra", "Nick Groen"],
 };
