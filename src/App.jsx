@@ -9,7 +9,7 @@ export default function App() {
   const [selectedCard, setSelectedCard] = useState(null);
 
   return (
-    <div className="bg-void min-h-screen">
+    <div className="bg-cream min-h-screen">
       <Hero />
       <Intro />
       <Timeline onCardClick={setSelectedCard} />

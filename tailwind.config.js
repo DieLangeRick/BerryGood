@@ -8,8 +8,9 @@ export default {
         void: "#0e0e1a",
         berry: "#e8294a",
         leaf: "#3d9b45",
-        cream: "#f0ece2",
-        surface: "#16162a",
+        cream: "#faf7f4",
+        surface: "#ffffff",
+        ink: "#1a1525",
       },
       fontFamily: {
         display: ["Orbitron", "monospace"],

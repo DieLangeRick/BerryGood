@@ -15,18 +15,18 @@ export default function Modal({ card, onClose }) {
     >
       <div
         data-testid="modal-content"
-        className="bg-[#16162a] border border-berry/30 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto glow-berry"
+        className="bg-white border border-ink/10 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Terminal header bar */}
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-berry/20 bg-[#0e0e1a]">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-ink/10 bg-cream">
           <div className="flex items-center gap-2.5">
             <div className="w-1.5 h-1.5 rounded-full bg-berry animate-pulse" />
             <span className="font-mono text-berry text-xs tracking-[0.3em] uppercase">{card.phase}</span>
           </div>
           <button
             onClick={onClose}
-            className="font-mono text-cream/30 hover:text-berry transition-colors text-xs tracking-widest"
+            className="font-mono text-ink/30 hover:text-berry transition-colors text-xs tracking-widest"
             aria-label="Close modal"
           >
             [ESC]
@@ -63,10 +63,10 @@ export default function Modal({ card, onClose }) {
 
         {/* Content */}
         <div className="p-6">
-          <h2 className="font-display text-lg font-black text-cream uppercase tracking-wide mb-4">
+          <h2 className="font-display text-lg font-black text-ink uppercase tracking-wide mb-4">
             {card.label}
           </h2>
-          <p className="font-mono text-sm text-cream leading-relaxed">{card.modalDescription}</p>
+          <p className="font-mono text-sm text-ink/70 leading-relaxed">{card.modalDescription}</p>
         </div>
       </div>
     </div>
