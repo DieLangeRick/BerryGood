@@ -56,7 +56,7 @@ export default function Modal({ card, onClose }) {
             <img
               src={card.image}
               alt={card.label}
-              className="w-full object-cover max-h-64 opacity-75"
+              className="w-full object-cover max-h-64"
             />
           )}
         </div>
@@ -66,7 +66,7 @@ export default function Modal({ card, onClose }) {
           <h2 className="font-display text-lg font-black text-cream uppercase tracking-wide mb-4">
             {card.label}
           </h2>
-          <p className="font-mono text-sm text-cream/55 leading-relaxed">{card.modalDescription}</p>
+          <p className="font-mono text-sm text-cream leading-relaxed">{card.modalDescription}</p>
         </div>
       </div>
     </div>
