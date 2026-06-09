@@ -35,7 +35,13 @@ export default function Modal({ card, onClose }) {
 
         {/* Media */}
         <div className="relative">
-          {card.videoUrl ? (
+          {card.videoUrl && isLocalVideo(card.videoUrl) ? (
+            <video
+              className="w-full max-h-64 object-cover"
+              src={card.videoUrl}
+              controls
+            />
+          ) : card.videoUrl ? (
             <div className="aspect-video">
               <iframe
                 className="w-full h-full"
@@ -64,6 +70,10 @@ export default function Modal({ card, onClose }) {
       </div>
     </div>
   );
+}
+
+function isLocalVideo(url) {
+  return url.startsWith("/");
 }
 
 function getYouTubeId(url) {
