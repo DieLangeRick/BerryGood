@@ -28,15 +28,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-void/40 via-transparent to-void" />
 
       <div className="relative z-10 text-center px-4">
-        <div className="text-4xl mb-5 select-none">🍓</div>
-
-        <p className="font-mono text-berry text-xs tracking-[0.4em] uppercase mb-5">
-          Project // Autonomous Harvesting
-        </p>
-
         <h1 className="font-display text-6xl md:text-8xl font-black text-cream text-glow mb-4 uppercase tracking-tight">
           {hero.title}
         </h1>
+
+        <div className="text-4xl mb-5 select-none">🍓</div>
 
         <p className="font-mono text-cream/50 text-sm md:text-base max-w-sm mx-auto leading-relaxed">
           {hero.tagline}
