@@ -10,7 +10,7 @@ export default function Modal({ card, onClose }) {
   return (
     <div
       data-testid="modal-backdrop"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-void/90 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
       onClick={onClose}
     >
       <div
@@ -59,7 +59,6 @@ export default function Modal({ card, onClose }) {
               className="w-full object-cover max-h-64 opacity-75"
             />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent pointer-events-none" />
         </div>
 
         {/* Content */}
