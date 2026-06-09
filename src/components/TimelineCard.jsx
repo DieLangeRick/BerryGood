@@ -21,11 +21,11 @@ export default function TimelineCard({ card, onClick }) {
         <h3 className="font-display text-xs font-bold text-cream uppercase tracking-widest mb-2">
           {card.label}
         </h3>
-        <p className="font-mono text-xs text-cream/35 leading-relaxed line-clamp-2">
+        <p className="font-mono text-[10px] text-cream/35 leading-relaxed line-clamp-2">
           {card.description}
         </p>
         <div className="mt-3 flex items-center gap-1.5 text-berry/70 text-xs font-mono group-hover:text-berry transition-colors">
-          <span>VIEW LOG</span>
+          <span>Bekijk week</span>
           <span className="translate-x-0 group-hover:translate-x-1 transition-transform">→</span>
         </div>
       </div>
