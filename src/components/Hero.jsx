@@ -34,21 +34,9 @@ export default function Hero() {
 
         <div className="text-4xl mb-5 select-none">🍓</div>
 
-        <p className="font-mono text-cream/50 text-sm md:text-base max-w-sm mx-auto leading-relaxed">
+        <p className="font-serif italic text-cream/60 text-xl md:text-2xl max-w-sm mx-auto leading-relaxed">
           {hero.tagline}
         </p>
-
-        <div className="flex items-center justify-center gap-8 mt-8">
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-leaf animate-pulse" />
-            <span className="font-mono text-xs text-cream/30 uppercase tracking-widest">Online</span>
-          </div>
-          <div className="w-px h-4 bg-cream/10" />
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full bg-berry animate-pulse" style={{ animationDelay: "0.7s" }} />
-            <span className="font-mono text-xs text-cream/30 uppercase tracking-widest">Auto mode</span>
-          </div>
-        </div>
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-berry/60 animate-bounce">

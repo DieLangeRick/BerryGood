@@ -14,6 +14,7 @@ export default {
       fontFamily: {
         display: ["Orbitron", "monospace"],
         mono: ["Space Mono", "monospace"],
+        serif: ["EB Garamond", "Georgia", "serif"],
       },
     },
   },
