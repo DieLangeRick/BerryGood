@@ -40,6 +40,7 @@ export default function Modal({ card, onClose }) {
               className="w-full max-h-64 object-cover"
               src={card.videoUrl}
               controls
+              muted
             />
           ) : card.videoUrl ? (
             <div className="aspect-video">
