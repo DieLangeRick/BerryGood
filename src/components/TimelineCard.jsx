@@ -2,8 +2,8 @@ export default function TimelineCard({ card, onClick }) {
   return (
     <button
       onClick={() => onClick(card)}
-      className="flex-shrink-0 w-64 bg-surface border border-ink/10 rounded-lg overflow-hidden
-                 hover:border-berry/50 hover:shadow-lg transition-all duration-300 cursor-pointer text-left group"
+      className="flex-shrink-0 w-64 bg-white border border-gray-200 rounded-lg overflow-hidden
+                 hover:border-berry/50 hover:shadow-xl transition-all duration-300 cursor-pointer text-left group shadow-md"
     >
       <div className="relative overflow-hidden">
         <img
