@@ -7,11 +7,10 @@ export default function Timeline({ onCardClick }) {
       <div className="px-6 mb-10">
         <div className="flex items-center gap-3 mb-3">
           <div className="h-px w-8 bg-berry" />
-          <span className="font-mono text-berry text-xs tracking-[0.3em] uppercase">Development Log</span>
         </div>
         <h2 className="font-display text-3xl md:text-4xl font-black text-cream uppercase tracking-tight">
-          Build Sequence
-        </h2>
+        Week bij Week 
+       </h2>
       </div>
 
       <div className="flex gap-4 overflow-x-auto px-6 pb-6 snap-x snap-mandatory">

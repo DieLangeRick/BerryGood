@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    background-color: #0a0a0f;
+    background-color: #0e0e1a;
     color: #f0ece2;
   }
 }
@@ -12,8 +12,8 @@
 @layer utilities {
   .bg-circuit {
     background-image:
-      linear-gradient(rgba(232, 41, 74, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(232, 41, 74, 0.04) 1px, transparent 1px);
+      linear-gradient(rgba(232, 41, 74, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 41, 74, 0.08) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 

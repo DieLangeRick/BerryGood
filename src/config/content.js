@@ -16,7 +16,7 @@ export const timelineCards = [
     label: "Bedenken",
     image: "/timeline/week 1-3.png",
     description: "In deze weken zijn veel plannen gemaakt. Sommige zijn zelfs uitgevoerd." ,
-    modalDescription: "In the first week we explored multiple arm designs. Our main challenge was deciding between a 2-axis and 3-axis arm. We chose a 3-axis design for more precise positioning over the plant.",
+    modalDescription: "Week 1-3 bestond voornamelijk uit overleg, planning en het maken van afspraken over toekomstig overleg en toekomstige planning. De voortgang was vooral theoretisch van aard, maar de verwachting was dat er op termijn ook daadwerkelijk gewerkt zou worden.",
     videoUrl: null,
   },
   {
@@ -41,9 +41,9 @@ export const timelineCards = [
     id: 4,
     phase: "Week 8-9",
     label: "Afronding",
-    image: "/timeline/4.jpg",
+    image: "/timeline/week 8-9.jpg",
     description: "The robot completed its first fully autonomous strawberry pick.",
-    modalDescription: "The first successful autonomous run was a huge milestone. We tuned the PID controller for arm movement and refined the pick timing. The robot now reliably identifies and picks strawberries without human input.",
+    modalDescription: "Tijdens de afronding is de elektronica in de behuizing gemonteerd en zijn de laatste details afgewerkt. De puntjes op de i zijn gezet en het project kon als voltooid worden beschouwd.",
     videoUrl: "/timeline/week 8-9.mp4",
   },
   {

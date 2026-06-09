@@ -6,7 +6,7 @@ export default function Intro() {
       <div className="max-w-xl mx-auto">
         <div className="flex items-center gap-4 mb-8">
           <div className="h-px flex-1 bg-berry/20" />
-          <span className="font-mono text-berry text-xs tracking-[0.3em] uppercase">Mission Brief</span>
+          <span className="font-mono text-berry text-xs tracking-[0.3em] uppercase">Introductie</span>
           <div className="h-px flex-1 bg-berry/20" />
         </div>
         <p className="font-mono text-cream/60 text-sm leading-relaxed text-center">

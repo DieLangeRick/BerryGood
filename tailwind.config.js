@@ -5,11 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        void: "#0a0a0f",
+        void: "#0e0e1a",
         berry: "#e8294a",
         leaf: "#3d9b45",
         cream: "#f0ece2",
-        surface: "#111118",
+        surface: "#16162a",
       },
       fontFamily: {
         display: ["Orbitron", "monospace"],
