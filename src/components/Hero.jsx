@@ -2,7 +2,7 @@ import { hero } from "../config/content";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-void bg-circuit">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-void">
       {/* Scan line */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="animate-scan w-full h-px bg-gradient-to-r from-transparent via-berry/40 to-transparent" />
