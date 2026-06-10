@@ -42,6 +42,7 @@ export const timelineCards = [
     id: 4,
     phase: "Week 8-9",
     label: "Afronding",
+    isCurrent: true,
     image: "/timeline/week 8-9.jpg",
     description: "The robot completed its first fully autonomous strawberry pick.",
     modalDescription: "Tijdens de afronding is de elektronica in de behuizing gemonteerd en zijn de laatste details afgewerkt. De puntjes op de i zijn gezet en het project kon als voltooid worden beschouwd.",
@@ -52,9 +53,9 @@ export const timelineCards = [
     phase: "Week 10",
     label: "Afronding",
     image: "/timeline/4.jpg",
-    description: "The robot completed its first fully autonomous strawberry pick.",
-    modalDescription: "The first successful autonomous run was a huge milestone. We tuned the PID controller for arm movement and refined the pick timing. The robot now reliably identifies and picks strawberries without human input.",
-    videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+    description: "Dit hoofdstuk schrijven we nog. Komt binnenkort.",
+    modalDescription: "We zijn er bijna. Week 10 staat in het teken van de eindpresentatie en de laatste tests. Dit hoofdstuk wordt binnenkort aangevuld.",
+    videoUrl: null,
   },
 ];
 

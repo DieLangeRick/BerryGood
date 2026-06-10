@@ -21,7 +21,7 @@ export default function Modal({ card, onClose }) {
         {/* Terminal header bar */}
         <div className="flex items-center justify-between px-4 py-2.5 border-b border-ink/10 bg-cream">
           <div className="flex items-center gap-2.5">
-            <div className="w-1.5 h-1.5 rounded-full bg-berry animate-pulse" />
+            {card.isCurrent && <div className="w-1.5 h-1.5 rounded-full bg-berry animate-pulse" />}
             <span className="font-mono text-berry text-xs tracking-[0.3em] uppercase">{card.phase}</span>
           </div>
           <button
