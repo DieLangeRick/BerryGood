@@ -39,7 +39,7 @@ export default function Modal({ card, onClose }) {
         <div className="relative">
           {card.videoUrl && isLocalVideo(card.videoUrl) ? (
             <video
-              className="w-full max-h-64 object-cover"
+              className={`w-full object-cover ${card.videoMuted === false ? "aspect-video" : "max-h-64"}`}
               src={card.videoUrl}
               controls
               playsInline
