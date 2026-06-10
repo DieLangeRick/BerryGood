@@ -32,8 +32,6 @@ export default function Hero() {
           {hero.title}
         </h1>
 
-        <div className="text-3xl sm:text-4xl mb-4 sm:mb-5 select-none">🍓</div>
-
         <p className="font-serif italic text-white/70 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-sm md:max-w-md mx-auto leading-relaxed">
           {hero.tagline}
         </p>
