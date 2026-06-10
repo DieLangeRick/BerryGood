@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="h-px flex-1 bg-berry/20" />
         </div>
 
-        <p className="font-mono text-xs text-ink/30 uppercase tracking-[0.3em] mb-5">De mannen en Tim</p>
+        <p className="font-mono text-xs text-ink/30 uppercase tracking-[0.3em] mb-5">Het team</p>
 
         <ul className="flex flex-wrap justify-center gap-6 mb-6">
           {team.members.map((member, i) => (
