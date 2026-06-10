@@ -43,6 +43,7 @@ export default function Modal({ card, onClose }) {
               src={card.videoUrl}
               controls
               playsInline
+              muted={card.videoMuted !== false}
             />
           ) : card.videoUrl ? (
             <div className="aspect-video">

@@ -56,6 +56,7 @@ export const timelineCards = [
     description: "Het licht aan het einde van een goed verlichte tunnel.",
     modalDescription: "We zijn er bijna. Week 10 staat in het teken van de eindpresentatie en de wedstrijd. Dit hoofdstuk wordt binnenkort aangevuld.",
     videoUrl: "/timeline/Afronding video.mp4",
+    videoMuted: false,
   },
 ];
 
