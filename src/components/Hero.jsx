@@ -10,7 +10,7 @@ export default function Hero() {
 
       {hero.type === "video" ? (
         <video
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
           src={hero.src}
           autoPlay
           muted
@@ -25,16 +25,16 @@ export default function Hero() {
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-void/20 via-transparent to-void" />
+      <div className="absolute inset-0 bg-black/70" />
 
-      <div className="relative z-10 text-center px-4">
-        <h1 className="font-display text-6xl md:text-8xl font-black text-cream text-glow mb-4 uppercase tracking-tight">
+      <div className="relative z-10 text-center px-4 sm:px-8">
+        <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white text-glow mb-3 sm:mb-4 uppercase tracking-tight">
           {hero.title}
         </h1>
 
-        <div className="text-4xl mb-5 select-none">🍓</div>
+        <div className="text-3xl sm:text-4xl mb-4 sm:mb-5 select-none">🍓</div>
 
-        <p className="font-serif italic text-cream/60 text-base md:text-lg max-w-sm mx-auto leading-relaxed">
+        <p className="font-serif italic text-white/70 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-sm md:max-w-md mx-auto leading-relaxed">
           {hero.tagline}
         </p>
       </div>
