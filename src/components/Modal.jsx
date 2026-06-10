@@ -55,7 +55,7 @@ export default function Modal({ card, onClose }) {
             </div>
           ) : (
             <img
-              src={card.image}
+              src={card.modalImage || card.image}
               alt={card.label}
               className="w-full object-cover max-h-64"
             />
