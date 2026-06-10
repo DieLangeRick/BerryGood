@@ -1,6 +1,6 @@
 export const hero = {
   type: "video",
-  src: "/timeline/1.mp4",
+  src: "/timeline/1_small.mp4",
   title: "BerryGood",
   tagline: 'Berry Smooth x Berry Smart = BerryGood',
 };
