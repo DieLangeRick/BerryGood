@@ -50,12 +50,22 @@ export const timelineCards = [
   },
   {
     id: 5,
+    phase: "Week 1-9",
+    label: "Samenvatting",
+    image: "/timeline/Poster.jpeg",
+    description: "Een terugblik op ons traject!",
+    modalDescription: "We zijn sterk uit de startblokken gekomen met duidelijke vergaderingen en een heldere taakverdeling. In het begin was het even wennen aan de SCRUM-methodiek en de dagelijkse stand-ups, die ritmes voelden in de eerste weken nog wat onwennig. Door er bewust mee aan de slag te blijven, hebben we onszelf hier echter doorheen gewerkt en groeide het al snel uit tot een natuurlijke manier van samenwerken. Die basis betaalde zich vervolgens dubbel en dwars terug: het bedenken en bouwen van de prototypes verliep daardoor opvallend soepel. Iedereen wist wat er moest gebeuren, knelpunten werden snel zichtbaar en beslissingen konden vlot worden genomen. Het resultaat is een goed project waar we als team trots op zijn.",
+    videoUrl: "/timeline/Afronding video.mp4",
+    videoMuted: false,
+  },
+  {
+    id: 6,
     phase: "Week 10",
     label: "Beoordeling",
     image: "/timeline/rendering.jpg",
     description: "Het licht aan het einde van een goed verlichte tunnel.",
     modalDescription: "We zijn er bijna. Week 10 staat in het teken van de eindpresentatie en de wedstrijd. Dit hoofdstuk wordt binnenkort aangevuld.",
-    videoUrl: "/timeline/Afronding video.mp4",
+    videoUrl: "/timeline/360.mp4",
     videoMuted: false,
   },
 ];
