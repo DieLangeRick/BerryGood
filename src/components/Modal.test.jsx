@@ -23,6 +23,8 @@ const mockCardWithLocalVideo = {
 };
 
 describe("Modal", () => {
+  afterEach(() => vi.restoreAllMocks());
+
   it("renders the card label", () => {
     render(<Modal card={mockCard} onClose={() => {}} />);
     expect(screen.getByText("First sketches")).toBeInTheDocument();
@@ -70,15 +72,38 @@ describe("Modal", () => {
   });
 
   it("autoplays and requests fullscreen when a local video card opens", async () => {
-    const playMock = vi.fn().mockResolvedValue(undefined);
-    const fullscreenMock = vi.fn().mockResolvedValue(undefined);
+    const playMock = vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue(undefined);
 
-    HTMLMediaElement.prototype.play = playMock;
-    Element.prototype.requestFullscreen = fullscreenMock;
+    // jsdom does not implement requestFullscreen, so define it before spying
+    if (!Element.prototype.requestFullscreen) {
+      Element.prototype.requestFullscreen = () => Promise.resolve();
+    }
+    const fullscreenMock = vi.spyOn(Element.prototype, "requestFullscreen").mockResolvedValue(undefined);
 
     render(<Modal card={mockCardWithLocalVideo} onClose={() => {}} />);
 
     await vi.waitFor(() => expect(playMock).toHaveBeenCalled());
     expect(fullscreenMock).toHaveBeenCalled();
+  });
+
+  it("falls back to webkitEnterFullscreen when requestFullscreen is absent", async () => {
+    const playMock = vi.spyOn(HTMLMediaElement.prototype, "play").mockResolvedValue(undefined);
+
+    // Remove requestFullscreen from the prototype so the instance has no such property
+    const originalRequestFullscreen = Element.prototype.requestFullscreen;
+    delete Element.prototype.requestFullscreen;
+
+    const webkitMock = vi.fn();
+    HTMLVideoElement.prototype.webkitEnterFullscreen = webkitMock;
+
+    try {
+      render(<Modal card={mockCardWithLocalVideo} onClose={() => {}} />);
+
+      await vi.waitFor(() => expect(playMock).toHaveBeenCalled());
+      expect(webkitMock).toHaveBeenCalled();
+    } finally {
+      Element.prototype.requestFullscreen = originalRequestFullscreen;
+      delete HTMLVideoElement.prototype.webkitEnterFullscreen;
+    }
   });
 });
