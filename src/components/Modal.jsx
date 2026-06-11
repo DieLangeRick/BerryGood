@@ -1,11 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Modal({ card, onClose }) {
+  const videoRef = useRef(null);
+
   useEffect(() => {
     const handleKey = (e) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, [onClose]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    (async () => {
+      try {
+        await video.play();
+        if (video.requestFullscreen) {
+          await video.requestFullscreen();
+        } else if (video.webkitEnterFullscreen) {
+          video.webkitEnterFullscreen();
+        }
+      } catch {
+        // autoplay or fullscreen blocked — modal stays open normally
+      }
+    })();
+  }, []);
 
   return (
     <div
@@ -39,9 +58,11 @@ export default function Modal({ card, onClose }) {
         <div className="relative">
           {card.videoUrl && isLocalVideo(card.videoUrl) ? (
             <video
+              ref={videoRef}
               className={`w-full object-cover ${card.videoMuted === false ? "aspect-video" : "max-h-64"}`}
               src={card.videoUrl}
               controls
+              autoPlay
               playsInline
               muted={card.videoMuted !== false}
             />

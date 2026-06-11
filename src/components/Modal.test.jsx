@@ -17,6 +17,11 @@ const mockCardWithVideo = {
   videoUrl: "https://www.youtube.com/watch?v=abc123",
 };
 
+const mockCardWithLocalVideo = {
+  ...mockCard,
+  videoUrl: "/videos/week1.mp4",
+};
+
 describe("Modal", () => {
   it("renders the card label", () => {
     render(<Modal card={mockCard} onClose={() => {}} />);
@@ -62,5 +67,18 @@ describe("Modal", () => {
     render(<Modal card={mockCard} onClose={handleClose} />);
     await user.keyboard("{Escape}");
     expect(handleClose).toHaveBeenCalled();
+  });
+
+  it("autoplays and requests fullscreen when a local video card opens", async () => {
+    const playMock = vi.fn().mockResolvedValue(undefined);
+    const fullscreenMock = vi.fn().mockResolvedValue(undefined);
+
+    HTMLMediaElement.prototype.play = playMock;
+    Element.prototype.requestFullscreen = fullscreenMock;
+
+    render(<Modal card={mockCardWithLocalVideo} onClose={() => {}} />);
+
+    await vi.waitFor(() => expect(playMock).toHaveBeenCalled());
+    expect(fullscreenMock).toHaveBeenCalled();
   });
 });
