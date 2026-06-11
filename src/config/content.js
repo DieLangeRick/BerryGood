@@ -12,6 +12,16 @@ export const intro = {
 export const timelineCards = [
   {
     id: 1,
+    phase: "Week 1-9",
+    label: "Samenvatting",
+    image: "/timeline/Poster.jpeg",
+    description: "Een kijk op ons traject!",
+    modalDescription: "We zijn sterk uit de startblokken gekomen met duidelijke vergaderingen en een heldere taakverdeling. In het begin was het even wennen aan de SCRUM-methodiek en de dagelijkse stand-ups, die ritmes voelden in de eerste weken nog wat onwennig. Door er bewust mee aan de slag te blijven, hebben we onszelf hier echter doorheen gewerkt en groeide het al snel uit tot een natuurlijke manier van samenwerken. Die basis betaalde zich vervolgens dubbel en dwars terug: het bedenken en bouwen van de prototypes verliep daardoor opvallend soepel. Iedereen wist wat er moest gebeuren, knelpunten werden snel zichtbaar en beslissingen konden vlot worden genomen. Het resultaat is een goed project waar we als team trots op zijn. Wil je meer zien over ons traject? Scroll gerust verder door de timeline.",
+    videoUrl: "/timeline/Afronding video.mp4",
+    videoMuted: false,
+  },
+  {
+    id: 2,
     phase: "Week 1-3",
     label: "Bedenken",
     image: "/timeline/week 1-3.png",
@@ -21,7 +31,7 @@ export const timelineCards = [
     videoUrl: null,
   },
   {
-    id: 2,
+    id: 3,
     phase: "Week 4-5",
     label: "Prototype",
     image: "/timeline/prototype1.jpeg",
@@ -30,7 +40,7 @@ export const timelineCards = [
     videoUrl: "/timeline/prototype 2.mp4",
   },
   {
-    id: 3,
+    id: 4,
     phase: "Week 6-7",
     label: "Realisatie",
     image: "/timeline/realisatie 1.jpeg",
@@ -39,7 +49,7 @@ export const timelineCards = [
     videoUrl: "/timeline/realisatie 2.mp4",
   },
   {
-    id: 4,
+    id: 5,
     phase: "Week 8-9",
     label: "Afronding",
     isCurrent: true,
@@ -47,16 +57,6 @@ export const timelineCards = [
     description: "De laatste details zijn afgewerkt en we zijn klaar voor de beoordeling ",
     modalDescription: "Tijdens de afronding werd de elektronica netjes in de behuizing gemonteerd en werden de laatste details zorgvuldig afgewerkt. Elk onderdeel werd gecontroleerd, losse eindjes werden weggewerkt en het systeem werd als geheel getest. Na al het werk van de afgelopen maanden konden we het project officieel als voltooid beschouwen.",
     videoUrl: "/timeline/week 8-9.mp4",
-  },
-  {
-    id: 5,
-    phase: "Week 1-9",
-    label: "Samenvatting",
-    image: "/timeline/Poster.jpeg",
-    description: "Een terugblik op ons traject!",
-    modalDescription: "We zijn sterk uit de startblokken gekomen met duidelijke vergaderingen en een heldere taakverdeling. In het begin was het even wennen aan de SCRUM-methodiek en de dagelijkse stand-ups, die ritmes voelden in de eerste weken nog wat onwennig. Door er bewust mee aan de slag te blijven, hebben we onszelf hier echter doorheen gewerkt en groeide het al snel uit tot een natuurlijke manier van samenwerken. Die basis betaalde zich vervolgens dubbel en dwars terug: het bedenken en bouwen van de prototypes verliep daardoor opvallend soepel. Iedereen wist wat er moest gebeuren, knelpunten werden snel zichtbaar en beslissingen konden vlot worden genomen. Het resultaat is een goed project waar we als team trots op zijn.",
-    videoUrl: "/timeline/Afronding video.mp4",
-    videoMuted: false,
   },
   {
     id: 6,
